@@ -6,7 +6,7 @@ import socket
 import threading
 
 
-HEADER = 64 #message byte length (buffer overflow vuln??)
+HEADER = 64 #message byte length 
 PORT = 4444
 SERVER = socket.gethostbyname(socket.gethostname())
 ADDR = (SERVER, PORT)
@@ -31,7 +31,7 @@ def handle_client(conn, addr):
         print(f"[{addr}] {msg}")
 
 
-# Begin listening to connections and passing them
+# Begin listening to connections 
 def start():
     server.listen()
     # What IP address are we connected to?
@@ -44,7 +44,5 @@ def start():
         # the number of active threads = ammount of clients conn
         # because the start thread is allways running then the count begins at -1 (subtract 1)
 
-
-#print("Server is listening for active connections.. ")
 start()
 
