@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 
-# Basic Server
-# Socket Object: socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+# Server
 
 import socket
 import threading
